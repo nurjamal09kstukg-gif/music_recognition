@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicID — Распознавание музыки</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="glass-container">
+        <header>
+            <h1>Music<span>ID</span></h1>
+            <p>Нажми на кнопку, чтобы узнать, что за трек играет</p>
+        </header>
+
+        <div class="visualizer-wrapper">
+            <div id="visualizer" class="visualizer">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div>
+            </div>
+        </div>
+
+        <button id="recordBtn" class="main-btn">
+            <span class="icon">🎤</span> Слушать
+        </button>
+
+        <div id="result" class="result-area">
+            <p class="placeholder">Ожидание записи...</p>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
