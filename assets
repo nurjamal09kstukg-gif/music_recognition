@@ -131,4 +131,29 @@ p {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
 }
+const btn = document.getElementById('recordBtn');
+const visualizer = document.getElementById('visualizer');
+const resultArea = document.getElementById('result');
+
+btn.onclick = async () => {
+    // Показываем анимацию загрузки
+    visualizer.style.display = 'flex';
+    btn.innerText = 'Слушаю...';
+    btn.disabled = true;
+
+    try {
+        // Здесь ваш код из предыдущего ответа для записи и fetch на сервер
+        // Для примера просто имитируем задержку:
+        setTimeout(() => {
+            visualizer.style.display = 'none';
+            btn.innerText = '🎤 Слушать';
+            btn.disabled = false;
+            resultArea.innerHTML = `<strong>Queen</strong> — Bohemian Rhapsody`;
+        }, 5000);
+        
+    } catch (err) {
+        alert("Ошибка доступа к микрофону");
+        visualizer.style.display = 'none';
+    }
+};
 
